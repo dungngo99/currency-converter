@@ -21,34 +21,51 @@
       <li>1 EUR = 26240 VND</li>
       <li>1 JPY = 215.859 VND</li>
     </ul>
-    <div class='row dn-box-converter'>
-      <div class='col-md-3 dn-div-col'>
-        <input type='number' id='dn-input-text'>
-      </div>
+    <div class='dn-box'>
+      <h2>XE Currency Converter</h2>
+      <div class='row dn-box-converter'>
+        <div class='col-md-3 dn-div-col'>
+          <div class='dn-input'>
+            <label>Amount</label>
+            <input type='number' id='dn-input-text' style='margin:0px; width:100%; border-radius:40px; height:40px;'>
+          </div>
+        </div>
 
-      <div class='col-md-4 dn-div-col'>
-        <label>From</label>
-        <select name='currency' id='from'>
-          <option value="vnd">VND</option>
-          <option value="usd">USD</option>
-          <option value="eur">EUR</option>
-          <option value="jpy">JPY</option>
-        </select>
-        <button  onclick ="reverse()"class='btn btn-primary btn-lg btn-outline-dark' id='dn-reverse-btn'><i class="fas fa-history"></i></button>
-        <label>To</label>
-        <select name='currency' id='to'>
-          <option value="usd">USD</option>
-          <option value="vnd">VND</option>
-          <option value="eur">EUR</option>
-          <option value="jpy">JPY</option>
-        </select>
-      </div>
+        <div class='col-md-8 dn-div-col'>
+          <div class='dn-drop-down'>
+            <label>From</label>
+            <select name='currency' id='from'>
+              <option value="vnd">VND</option>
+              <option value="usd">USD</option>
+              <option value="eur">EUR</option>
+              <option value="jpy">JPY</option>
+            </select>
+          </div>
 
-      <div class='col-md-5 dn-div-col'>
-        <button class='btn btn-primary btn-lg dn-btn-converter btn-outline-dark' onclick='converter()'><i
-            class="fas fa-arrow-right"></i></button>
+          <button onclick="reverse()" class='btn btn-primary btn-lg btn-outline-dark' id='dn-reverse-btn'><i
+              class="fas fa-history"></i></button>
+
+          <div class='dn-drop-down'>
+            <label>To</label>
+            <select name='currency' id='to'>
+              <option value="usd">USD</option>
+              <option value="vnd">VND</option>
+              <option value="eur">EUR</option>
+              <option value="jpy">JPY</option>
+            </select>
+          </div>
+        </div>
+
+        <div class='col-md-1 dn-div-col' style='margin:0px; padding:0px'>
+          <button class='btn btn-primary btn-lg dn-btn-converter btn-outline-dark' onclick='converter()'><i
+              class="fas fa-arrow-right"></i></button>
+        </div>
       </div>
+      <p>All figures are live <a href='#' class='dn-mid-market'>mid-market rates</a>, which are not available to
+        consumers and are for informational purposes only. To see the rates we quote for money transfer, please select
+        Live Money Transfer Rates.</p>
     </div>
+
     <div class='dn-output'>
       <p class='dn-lead' style='font-weight:bold'>Output:</p>
       <output name='x' id='dn-output-text'>Hello World</output>

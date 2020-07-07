@@ -48,4 +48,9 @@ function reverse() {
 3. To convert from String to Number, use parseInt() (if NaN, return NaN) or Number() (if NaN, return 0) method as above
 4. isNaN() is used to check if a number is NaN
 5. To change a current value appearing in dropdown list: we use document.getElementById("id here").value = new value
+6. We can see the ouput of console.log() in browser (Inspect element -> Console. Run the js file->Click on button to call function->Output showed in Console)
+7. Use querySelector with its attributes: 
+let var = document.querySelector('tagElement[attr1="value1"]:checked').value;
+8. Show a value of a variable in a String: (use backticks `` and ${}). Ex:
+document.getElementById('id here').innerHTML = `A String here ${variable}`
 */
