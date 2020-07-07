@@ -29,8 +29,10 @@
 }
 
 #dn-input-text{
-  width: 90%;
-  margin: auto;
+  margin:0px;
+  width:100%;
+  border-radius:40px;
+  height:40px;
 }
 
 .dn-div-col{

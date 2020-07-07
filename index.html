@@ -16,18 +16,23 @@
 <body>
   <section class='container dn-section1'>
     <h3>Current currency rate</h3>
-    <ul>
-      <li>1 USD = 23232 VND</li>
-      <li>1 EUR = 26240 VND</li>
-      <li>1 JPY = 215.859 VND</li>
+    <button class='btn btn-primary btn-outline-dark' onclick='UpdateCurrency()'>Update Currency Rates</button>
+    <ul id='ul1'>
+      <li><span id='line1'>1 USD = 23232 VND</span></li>
+      <li><span id='line2'>1 USD = 23232 VND</span></li>
+      <li><span id='line3'>1 USD = 23232 VND</span></li>
+      <li><span id='line4'>1 USD = 23232 VND</span></li>
+      <li><span id='line5'>1 USD = 23232 VND</span></li>
     </ul>
+
     <div class='dn-box'>
       <h2>XE Currency Converter</h2>
       <div class='row dn-box-converter'>
         <div class='col-md-3 dn-div-col'>
           <div class='dn-input'>
             <label>Amount</label>
-            <input type='number' id='dn-input-text' style='margin:0px; width:100%; border-radius:40px; height:40px;'>
+            <input type='number' id='dn-input-text' oninput='converter()'>
+            <!--Constant change when user changes input: oninput='converter()'-->
           </div>
         </div>
 
@@ -39,6 +44,8 @@
               <option value="usd">USD</option>
               <option value="eur">EUR</option>
               <option value="jpy">JPY</option>
+              <option value="aed">AED</option>
+              <option value="inr">INR</option>
             </select>
           </div>
 
@@ -52,23 +59,25 @@
               <option value="vnd">VND</option>
               <option value="eur">EUR</option>
               <option value="jpy">JPY</option>
+              <option value="aed">AED</option>
+              <option value="inr">INR</option>
             </select>
           </div>
         </div>
 
         <div class='col-md-1 dn-div-col' style='margin:0px; padding:0px'>
-          <button class='btn btn-primary btn-lg dn-btn-converter btn-outline-dark' onclick='converter()'><i
+          <button class='btn btn-warning btn-lg dn-btn-converter btn-outline-dark' onclick='converter()'><i
               class="fas fa-arrow-right"></i></button>
         </div>
       </div>
       <p>All figures are live <a href='#' class='dn-mid-market'>mid-market rates</a>, which are not available to
         consumers and are for informational purposes only. To see the rates we quote for money transfer, please select
         Live Money Transfer Rates.</p>
-    </div>
 
-    <div class='dn-output'>
-      <p class='dn-lead' style='font-weight:bold'>Output:</p>
-      <output name='x' id='dn-output-text'>Hello World</output>
+      <div class='dn-output'>
+        <p class='dn-lead' style='font-weight:bold'>Output:</p>
+        <output name='x' id='dn-output-text' class='text-danger'>Hello World</output>
+      </div>
     </div>
   </section>
 
