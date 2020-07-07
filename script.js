@@ -4,21 +4,23 @@ let exchangeRates2Vnd = {};
 This function get the currency rates through API
 */
 async function callAPI() {
-  let url = "http://data.fixer.io/api/latest?access_key=c00e15cca5a9a358410b21fe863681b1"
+  let url = "https://data.fixer.io/api/latest?access_key=c00e15cca5a9a358410b21fe863681b1"
   let response = await fetch(url);
-  if (response.ok) {
+  console.log(response);
+  if (response.success) {
     let data = await response.json();
     exchangeRates2Vnd = data['rates'];
-  } else {
+  }else {
     exchangeRates2Vnd = {
       'USD': 1.4,
-      'EUR': 1, 
-      'JPY': 332.1, 
+      'EUR': 1,
+      'JPY': 332.1,
       'VND': 26445,
       'INR': 3423,
       'AED': 344.34,
     };
   }
+  //console.log(exchangeRates2Vnd);
 }
 callAPI();
 
