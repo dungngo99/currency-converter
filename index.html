@@ -15,15 +15,58 @@
 
 <body>
   <section class='container dn-section1'>
-    <h3>Current currency rate</h3>
-    <button class='btn btn-primary btn-outline-dark' onclick='UpdateCurrency()'>Update Currency Rates</button>
-    <ul id='ul1'>
-      <li><span id='line1'>1 USD = 23232 VND</span></li>
-      <li><span id='line2'>1 USD = 23232 VND</span></li>
-      <li><span id='line3'>1 USD = 23232 VND</span></li>
-      <li><span id='line4'>1 USD = 23232 VND</span></li>
-      <li><span id='line5'>1 USD = 23232 VND</span></li>
-    </ul>
+    <h3>Current Currency Rate with VND as base</h3>
+    <div class='row dn-header'>
+      <button class='btn btn-primary btn-outline-dark dn-btn-update col-md-3' onclick='UpdateCurrency()'>Update Currency
+        Rates</button>
+      <ul class='col-md-9 dn-note text-primary'>
+        <li id='dn-date'>Date:</li>
+        <li id='dn-base'>Base:</li>
+        <li id='dn-api'>Connected to API: </li>
+      </ul>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Country</th>
+          <th scope="col">Currency</th>
+          <th scope="col">Currency Rate (VND)</th>
+        </tr>
+      </thead>
+      <tbody class='dn-tbody' id='tbody'>
+        <tr>
+          <th scope="row">1</th>
+          <td>USA</td>
+          <td>USD</td>
+          <td id='line1'>23000</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>European</td>
+          <td>EUR</td>
+          <td id='line2'>23000</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Japan</td>
+          <td>JPY</td>
+          <td id='line3'>23000</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Arab Emirates</td>
+          <td>AED</td>
+          <td id='line4'>23000</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>India</td>
+          <td>INR</td>
+          <td id='line5'>23000</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class='dn-box'>
       <h2>XE Currency Converter</h2>
@@ -54,7 +97,7 @@
 
           <div class='dn-drop-down'>
             <label>To</label>
-            <select name='currency' id='to'>
+            <select name='currency' id='to' size=1>
               <option value="usd">USD</option>
               <option value="vnd">VND</option>
               <option value="eur">EUR</option>

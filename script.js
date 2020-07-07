@@ -1,16 +1,42 @@
-let exchangeRates2Vnd = {};
+let exchangeRates2Vnd = {}
+let api_data = {}
 
 /*
 This function get the currency rates through API
 */
 async function callAPI() {
-  let url = "https://data.fixer.io/api/latest?access_key=c00e15cca5a9a358410b21fe863681b1"
-  let response = await fetch(url);
-  console.log(response);
-  if (response.success) {
+  let endpoints = ['latest', 'convert', 'timeseries', 'fluctuation']
+  let access_key = 'c00e15cca5a9a358410b21fe863681b1';
+  let callback = null;
+  let attrs = {
+    'latest': [,'base', 'symbols'], 
+    'convert': ['from', 'to', 'amount', 'date'], 
+    'timeseries': ['start-date', 'end-date','base','symbols'], 
+    'fluatuation': ['start-date', 'end-date','base','symbols']
+  }
+
+  let url = `http://data.fixer.io/api/${endpoints[0]}?access_key=${access_key}&${attrs['latest'][0]}=EUR`
+  //Link to Fixer API documentation: https://fixer.io/documentation
+
+  try {
+    let response = await fetch(url);
     let data = await response.json();
-    exchangeRates2Vnd = data['rates'];
-  }else {
+    api_data = data
+    console.log(data);
+    if (data['success']) {
+      exchangeRates2Vnd = data['rates'];
+    } else {
+      exchangeRates2Vnd = {
+        'USD': 1.4,
+        'EUR': 1,
+        'JPY': 332.1,
+        'VND': 26445,
+        'INR': 3423,
+        'AED': 344.34,
+      };
+    }
+  } catch (err) {
+    console.log("Failed to connect to API");
     exchangeRates2Vnd = {
       'USD': 1.4,
       'EUR': 1,
@@ -78,5 +104,15 @@ function UpdateCurrency() {
     let toVND = 1 / exchangeRates2Vnd[cur_abbr[i]] * exchangeRates2Vnd['VND'];
     toVND = toVND.toFixed(2);
     document.getElementById(ids[i]).innerHTML = `${cur[i]}: 1 ${cur_abbr[i]} = ${toVND} VND`;
+  }
+
+  if (api_data['success']){
+    document.getElementById('dn-date').innerText = `Date: ${api_data['date']}`;
+    document.getElementById('dn-base').innerText = `Base: ${api_data['base']}`;
+    document.getElementById('dn-api').innerText = `Connected to API: ${api_data['success']}`;
+  }else{
+    document.getElementById('dn-date').innerText = "Date: Not available";
+    document.getElementById('dn-base').innerText = "Base: Not available. Use redefined rates";
+    document.getElementById('dn-api').innerText = `Connected to API: ${api_data['success']}. Error: ${api_data['error']['type']}`;
   }
 }

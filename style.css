@@ -1,20 +1,20 @@
-.dn-section1{
+.dn-section1 {
   width: 1024px;
 }
 
-.dn-box-converter{
+.dn-box-converter {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 30px;
 }
 
-.dn-btn-converter{
+.dn-btn-converter {
   width: 100%;
   height: 25%;
 }
 
-.dn-output{
+.dn-output {
   text-align: center;
   height: 100px;
   display: flex;
@@ -23,52 +23,64 @@
   align-items: center;
 }
 
-#dn-output-text{
+#dn-output-text {
   color: blue;
   font-size: 30px;
 }
 
-#dn-input-text{
-  margin:0px;
-  width:100%;
-  border-radius:40px;
-  height:40px;
+#dn-input-text {
+  margin: 0px;
+  width: 100%;
+  border-radius: 40px;
+  height: 40px;
 }
 
-.dn-div-col{
+.dn-div-col {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.dn-mid-market{
+.dn-mid-market {
   color: white;
   text-decoration: underline;
 }
 
-.dn-box{
+.dn-box {
   background-color: rgb(19, 19, 131);
   padding: 20px;
   border-radius: 50px;
   color: white;
 }
 
-.dn-drop-down{
+.dn-drop-down {
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.dn-input{
+.dn-input {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-#from, #to{
+#from,
+#to {
   width: 100%;
   height: 40px;
-  border-radius:40px
+  border-radius: 40px;
+}
+
+.dn-btn-update{
+  margin: 30px 0px;
+}
+
+.dn-note{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px
 }
