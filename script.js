@@ -5,7 +5,7 @@ let exchangeRates2Vnd = {};
 This function get the currency rates through API
 */
 async function callAPI() {
-  let url = "http://data.fixer.io/api/latest?access_key=c00e15cca5a9a358410b21fe863681b1"
+  let url = "https://data.fixer.io/api/latest?access_key=c00e15cca5a9a358410b21fe863681b1"
   let response = await fetch(url);
   if (response.ok) {
     let data = await response.json();
