@@ -15,7 +15,7 @@ async function callAPI() {
     'fluatuation': ['start-date', 'end-date','base','symbols']
   }
 
-  let url = `http://data.fixer.io/api/${endpoints[0]}?access_key=${access_key}&${attrs['latest'][0]}=EUR`
+  let url = `https://data.fixer.io/api/${endpoints[0]}?access_key=${access_key}&${attrs['latest'][0]}=EUR`
   //Link to Fixer API documentation: https://fixer.io/documentation
 
   try {
