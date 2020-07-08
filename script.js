@@ -2,6 +2,15 @@ let exchangeRates2Vnd = {}
 let api_data = {}
 
 /*
+Function to make sure that the program calls function sequentially. Recall: await assures that callAPI() has to return first before calling updateDropDown(). Without await, updateDropDown() may be called in the halfway of callAPI
+*/
+async function UpdateData() {
+  await callAPI();
+  updateDropDown();
+}
+UpdateData()
+
+/*
 This function get the currency rates through API
 */
 async function callAPI() {
@@ -15,7 +24,7 @@ async function callAPI() {
     'fluatuation': ['start-date', 'end-date','base','symbols']
   }
 
-  let url = `https://data.fixer.io/api/${endpoints[0]}?access_key=${access_key}&${attrs['latest'][0]}=EUR`
+  let url = `http://data.fixer.io/api/${endpoints[0]}?access_key=${access_key}&${attrs['latest'][0]}=EUR`
   //Link to Fixer API documentation: https://fixer.io/documentation
 
   try {
@@ -48,7 +57,25 @@ async function callAPI() {
   }
   //console.log(exchangeRates2Vnd);
 }
-callAPI();
+
+/*
+Function to update the drop down list
+*/
+function updateDropDown(){
+  let from = document.getElementById('from');
+  for (let key in api_data['rates']){
+    let child = document.createElement('option');
+    child.text = key;
+    from.add(child);
+  }
+
+  let to = document.getElementById('to');
+  for (let key in api_data['rates']){
+    let child = document.createElement('option');
+    child.text = key;
+    to.add(child);
+  }
+}
 
 /*
 This function is used to format the output
