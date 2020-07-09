@@ -24,8 +24,10 @@ async function callAPI() {
     'fluatuation': ['start-date', 'end-date','base','symbols']
   }
 
-  let url = `http://data.fixer.io/api/${endpoints[0]}?access_key=${access_key}&${attrs['latest'][0]}=EUR`
+  let url = `https://data.fixer.io/api/${endpoints[0]}?access_key=${access_key}&${attrs['latest'][0]}=EUR`
+  //url = 'https://v6.exchangerate-api.com/v6/78fb296ea3727f08458e03ac/latest/USD'
   //Link to Fixer API documentation: https://fixer.io/documentation
+  //Link to ExchangeRate API documentation: https://www.exchangerate-api.com/docs/overview (has https)
 
   try {
     let response = await fetch(url);
@@ -59,7 +61,8 @@ async function callAPI() {
 }
 
 /*
-Function to update the drop down list
+Function to update the drop down list. Create new element in js and add it as a child to select tag
+Resources: W3 School HTML DOM Documentation
 */
 function updateDropDown(){
   let from = document.getElementById('from');
