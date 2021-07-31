@@ -4,7 +4,7 @@ A web-based currency exchange converter using XE.com API and written in HTML/CSS
 Link to production: https://quirky-hawking-c16bd5.netlify.app/
 
 ## Demo
-(![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif))
+![Alt Text](https://media.giphy.com/media/DsdV5cVpEEKxOk6h1F/giphy.gif)
 
 ## 📚 Table of contents
 - [Technical stack](#technical-stack)
