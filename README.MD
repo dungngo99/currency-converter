@@ -3,6 +3,9 @@
 A web-based currency exchange converter using XE.com API and written in HTML/CSS/JavaScript
 Link to production: https://quirky-hawking-c16bd5.netlify.app/
 
+## Demo
+(![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif))
+
 ## 📚 Table of contents
 - [Technical stack](#technical-stack)
 - [Features](#features)
