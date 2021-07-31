@@ -1,6 +1,6 @@
-# [Exchange Rate Converter](https://github.com/dle8/Kronos) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dle8/Kronos/blob/master/LICENSE)
+# [Exchange Rate Converter](https://github.com/dungngo99/currency-converter) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dle8/Kronos/blob/master/LICENSE)
 
-A web-based currency exchange converter using XE.com API and written in HTML/CSS/JavaScript
+A web-based currency exchange converter using XE.com API and written in HTML/CSS/JavaScript<br>
 Link to production: https://quirky-hawking-c16bd5.netlify.app/
 
 ## Demo
