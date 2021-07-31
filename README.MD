@@ -1,4 +1,4 @@
-# [Exchange Rate Converter](https://github.com/dungngo99/currency-converter) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dle8/Kronos/blob/master/LICENSE)
+# [Exchange Rate Converter](https://github.com/dungngo99/currency-converter) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dungngo99/currency-converter/blob/master/LICENSE)
 
 A web-based currency exchange converter using XE.com API and written in HTML/CSS/JavaScript<br>
 
