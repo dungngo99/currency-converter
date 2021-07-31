@@ -1,7 +1,8 @@
 # [Exchange Rate Converter](https://github.com/dungngo99/currency-converter) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dle8/Kronos/blob/master/LICENSE)
 
 A web-based currency exchange converter using XE.com API and written in HTML/CSS/JavaScript<br>
-Link to production: https://quirky-hawking-c16bd5.netlify.app/
+
+## Production: https://currency-converter-dngo.netlify.app
 
 ## Demo
 
@@ -24,13 +25,13 @@ Link to production: https://quirky-hawking-c16bd5.netlify.app/
 - Constantly update the page with latest currency rates from EX.com API of the several countries
 - Convert the money from 1 currency toany another currency with the latest rate
 
-## 🧩 Challenges
-
-- Learn how to link the JS script to HTML script and call specific API endpoints with secret key and queries
-
 ## ⬇ Installation
 
 - This is is written in plain files of HTML, CSS, and JS.
+
+## 🧩 Challenges
+
+- Learn how to link the JS script to HTML script and call specific API endpoints with secret key and queries
 
 ## 📄 License
 
