@@ -33,7 +33,7 @@ async function callAPI() {
     let response = await fetch(url);
     let data = await response.json();
     api_data = data
-    console.log(data);
+
     if (data['success']) {
       exchangeRates2Vnd = data['rates'];
     } else {
